@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home Section</title>
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <nav class="bg-gray-800 text-gray-300 px-8 py-4 fixed top-0 left-0 w-full shadow-md indexx">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">Welcome to My Portfolio</h1>
+            <ul class="hidden md:flex space-x-10 font-bold text-lg">
+                <li><a href="#home" class="hover-underline">Home</a></li>
+                <li><a href="#about" class="hover-underline">About</a></li>
+                <li><a href="#resume" class="hover-underline">Resume</a></li>
+                <li><a href="#projects" class="hover-underline">Projects</a></li>
+                <li><a href="#contact" class="hover-underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="dynamic-background flex items-center justify-center min-h-screen text-center px-6 pt-20">
+
+        <div>
+            <div class="circle react">
+                <img src="../assets/icons/react.svg" alt="hi" class="z-0">
+            </div>
+            <div class="circle mongodb">
+                <img src="../assets/icons/mongodb.svg" alt="hi">
+            </div>
+            <div class="circle express">
+                <img src="../assets/icons/expressjs.png" alt="hi">
+            </div>
+
+            <div class="circle nodejs">
+                <img src="../assets/icons/nodejs.svg" alt="hi">
+            </div>
+        </div>
+        <div class="relative z-10 flex flex-col md:flex-row items-center md:space-x-8 max-w-4xl">
+
+            <!-- Profile Picture -->
+            <div
+                class="mb-6 md:mb-0 w-[450px] h-72 rounded-[20px] overflow-hidden shadow-lg hover:shadow-white duration-700">
+                <img src="../assets/icons/Photo.png" alt="Profile Picture" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Text Content -->
+            <div class="ml-5 text-left text-white">
+                <div class="text-yellow-200 font-bold text-lg">Hello</div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 ">I'm
+                    <span class="text-yellow-300">Anup Lohar</span>
+                </h1>
+                <h1 class="text-lg md:text-xl mb-6 font-bold">
+                    A Passionate Full Stack Developer specializing in the MERN Stack
+                </h1>
+
+                <!-- Summary -->
+                <p class="leading-relaxed mb-8 text-lg">
+                    Implemented and created dynamic web applications that solve real-world problems. With skills
+                    in MongoDB, Express, React, and Node.js, I aim to deliver seamless, user-friendly digital
+                    experiences.
+                </p>
+
+                <!-- Call-to-Action Buttons -->
+                <div class="flex space-x-4">
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/anuplohar001" target="_blank"
+                        class="flex items-center px-3 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">
+                        <img src="../assets/icons/github.png" alt="GitHub Icon" class="h-10 w-10 mr-2 rounded-full">
+                        View My Work
+                    </a>
+
+                    <!-- LinkedIn Button -->
+                    <a href="https://www.linkedin.com/in/anup-lohar-581b81212" target="_blank"
+                        class="flex items-center px-3 py-2 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">
+                        <img src="../assets/icons/linkedin.png" alt="LinkedIn Icon" class="h-8 w-8 mr-2">
+                        LinkedIn
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="dynamic-background flex items-center pt-20 px-8">
+        <div class="max-w-6xl mx-auto text-center md:text-left flex ">
+
+            <div class="mb-16 w-[40vw] mr-5">
+                <h2 class="text-4xl font-bold text-white mb-8 relative">
+                    About Me
+                    <span class="absolute left-0 -bottom-2 w-20 h-1 bg-blue-500 rounded-full"></span>
+                </h2>
+
+                <p class="text-white leading-relaxed">
+                    With a solid foundation in front-end technologies like React and back-end technologies like Node.js
+                    and
+                    Express, I enjoy creating user-friendly interfaces and robust server-side applications. I'm
+                    constantly
+                    seeking opportunities to learn and grow, and I believe in the power of collaboration to achieve
+                    great
+                    results.
+                </p>
+            </div>
+
+            <!-- Skills Section with Animated Progress Bars -->
+            <div class="mb-10 w-[35vw] ml-10">
+                <h3 class="text-3xl font-bold text-white mb-8">Skills</h3>
+
+                <!-- Skill Progress Bars -->
+                <div class="space-y-6">
+                    <!-- React Skill -->
+                    <div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">React</span>
+                            <span class="text-gray-400">76%</span>
+                        </div>
+                        <div class="bg-black h-3 rounded-full w-[35vw]">
+                            <div class="bg-yellow-400 h-full rounded-full" style="width: 76%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Node.js Skill -->
+                    <div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Node.js</span>
+                            <span class="text-gray-400">82%</span>
+                        </div>
+                        <div class="bg-black h-3 rounded-full overflow-hidden">
+                            <div class="bg-yellow-500 h-full rounded-full" style="width: 82%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Express.js Skill -->
+                    <div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Express.js</span>
+                            <span class="text-gray-400">80%</span>
+                        </div>
+                        <div class="bg-black h-3 rounded-full overflow-hidden">
+                            <div class="bg-yellow-500 h-full rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- MongoDB Skill -->
+                    <div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">MongoDB</span>
+                            <span class="text-gray-400">73%</span>
+                        </div>
+                        <div class="bg-black h-3 rounded-full overflow-hidden">
+                            <div class="bg-yellow-500 h-full rounded-full" style="width: 73%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="other-skills" class="py-10">
+        <h3 class="text-2xl font-bold text-center text-white mb-6">Other Skills</h3>
+        <div class="skills-carousel overflow-hidden relative w-full py-4">
+            <div class="skills-track flex gap-12 animate-scroll">
+                <!-- Skills Icons -->
+                <img src="../assets/icons/html.svg" alt="HTML" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/css.svg" alt="CSS" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/javascript.svg" alt="JavaScript" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/react.svg" alt="JavaScript" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/nodejs.svg" alt="JavaScript" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/tailwind.svg" alt="TailwindCSS" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/git.svg" alt="Git" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/github.svg" alt="GitHub" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/mongodb.svg" alt="MongoDB" class="w-20 h-20 opacity-70">
+                <img src="../assets/icons/C++.svg" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/java.png" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/C.svg" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/python.svg" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <!-- Duplicate icons for continuous effect -->
+                <img src="../assets/icons/html.svg" alt="HTML" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/css.svg" alt="CSS" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/javascript.svg" alt="JavaScript" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/react.svg" alt="JavaScript" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/nodejs.svg" alt="JavaScript" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/tailwind.svg" alt="TailwindCSS" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/git.svg" alt="Git" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/github.svg" alt="GitHub" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/mongodb.svg" alt="MongoDB" class="w-20 h-20 opacity-70">
+                <img src="../assets/icons/C++.svg" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/java.png" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/C.svg" alt="MongoDB" class="w-16 h-16 opacity-70">
+                <img src="../assets/icons/python.svg" alt="MongoDB" class="w-16 h-16 opacity-70">
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-8">
+            <!-- Resume Title -->
+            <h2 class="text-4xl font-bold text-center text-white mb-10">Resume</h2>
+
+            <!-- Personal Projects Section -->
+            <div>
+                <h3 class="education text-center text-3xl font-semibold text-yellow-400 p-3">Work Experience</h3>
+                <div class="p-6 bg-gray-800 rounded-lg shadow-md mt-4">
+                    <h4 class="text-2xl font-semibold">Personal Project's Experience</h4>
+                    <div>
+                        Experienced in full-stack web development using the
+                        <b></b>MERN stack </b>, with hands-on expertise in <b>MongoDB</b> for database
+                        management, <b>Express</b> for backend routing, <b>Next.js</b> for server-side rendering and API
+                        integration, and <b>React.js</b> with
+                        <b>Tailwind CSS</b> for responsive UI design. Additionally skilled in <b> HTML, CSS, JavaScript,
+                            and Fetch API </b> for interactive
+                        front-end functionality. Proficient in <b>Data Structures and Algorithms,</b> having solved over
+                        <b> 100 problems in C++ </b> and
+                        participated in 20+ competitive programming contests on CodeChef and Codeforces.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div>
+                <h3 class="text-center text-3xl font-semibold text-yellow-400 education">Education</h3>
+                <div class="md:flex gap-8">
+                    <!-- BE Column Box -->
+                    <div class="md:w-1/2 p-6 bg-gray-800 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-semibold">Bachelor of Engineering (BE) - Information Technology</h4>
+                        <div class="college">
+                            <p>KJ's Institute Trinity College of Engineering and Research</p>
+                            <p>(Affiliated to Savitribai Phule Pune University)</p>
+
+                        </div>
+                        <p class="college">August 2021 - May 2025</p>
+                        <b class="college">CGPA: 8.07</b>
+                        <div class="flex text-white">
+                            <a href="https://drive.google.com/file/d/1UtqT72TOoeK9PyXhkHdiZo_uAm2_9-rg/view?usp=sharing"
+                                class=" z-10 results">
+                                Click Here
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 12th Grade and 10th Grade Column Boxes -->
+                    <div class="md:w-1/2 space-y-8">
+                        <!-- 12th Grade Column Box -->
+                        <div class="p-6 bg-gray-800 rounded-lg shadow-md">
+                            <h4 class="text-2xl font-semibold">12th Grade</h4>
+                            <p>Chandmal Tarachand Bora College, Shirur</p>
+                            <p>June 2020 - April 2021</p>
+                            <b>Percentage: 88.33%</b>
+                            <div class="flex text-white">
+                                <a href="https://drive.google.com/file/d/15TNjql1L7g-oT_Shb4Z5C-I-q7MJCCby/view?usp=sharing"
+                                    class=" z-10 results">
+                                    Click Here
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- 10th Grade Column Box -->
+                        <div class="tenth p-6 bg-gray-800 rounded-lg shadow-md">
+                            <h4 class="text-2xl font-semibold">10th Grade</h4>
+                            <p>Parikrama Public School, Kashti</p>
+                            <p>June 2018 - April 2019</p>
+                            <b>Percentage: 79.00%</b>
+                            <div class="flex text-white">
+                                <a href="https://drive.google.com/file/d/14wDFjXMiE_8dPNgK82Kb6Xebl0gGvc3y/view?usp=sharing"
+                                    class=" z-10 results">
+                                    Click Here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Download Resume Button -->
+            <div class="flex justify-center">
+                <div class="flex mt-12 mr-3 text-white justify-center">
+                    <a href="../assets/Documents/AnupLohar.pdf" download class="download-btn z-10">
+                        Download Resume
+                    </a>
+                </div>
+                <div class="flex mt-12 text-white justify-center" style="margin-left: 20px;">
+                    <a href="https://drive.google.com/file/d/14Ii_ECzTT_tNSYs8QKol_b7-lDS8ucP6/view?usp=sharing"
+                        class="download-btn z-10">
+                        Google Drive Link
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-8">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Projects</h2>
+            <div class="md:flex gap-8">
+                <!-- Column for First Project -->
+                <div class="md:w-1/2 p-6 bg-gray-700 rounded-lg shadow-md">
+                    <div class="contact">
+                        <video autoplay loop muted class="video object-cover rounded-lg mb-4">
+                            <source src="/assets/prompts.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-yellow-400">Prompts Sharing Web App</h3>
+                    <p class="text-white">An interactive website with various AI prompts where an authorized user can
+                        <b>
+                            create, update, delete, like, comment,</b> and add stories with the AI prompts using
+                        <b>
+                            MongoDB,
+                            Express,
+                            Next API routes </b> for backend, and
+                        <b>
+                            NextJS and Tailwind CSS </b> for frontend.
+                    </p>
+
+                    <div class="flex space-x-4 mt-12 justify-center">
+                        <div
+                            class="z-10 flex items-center bg-yellow-400 rounded-full font-bold hover:bg-yellow-600 transition duration-300 p-3 livelink">
+                            <a href="https://prompts-book.vercel.app/" class="flex">Live Link</a>
+                        </div>
+                        <div
+                            class="z-10 flex items-center bg-yellow-400 rounded-full font-bold hover:bg-yellow-600 transition duration-300 p-3 gitHub">
+                            <a href="https://github.com/anuplohar001/PromptsBook" class="flex">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 p-6 bg-gray-700 rounded-lg shadow-md flex flex-col">
+                    <div class="contact">
+                        <video autoplay loop muted class="video object-cover rounded-lg mb-4">
+                            <source src="/assets/sorting.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Sorting Visualizer</h3>
+                        <p class="text-white">Interactive web app showing the
+                            <b>
+                                inner workings of various sorting algorithms</b>
+                            through dynamic visual representations. It allows users to choose
+                            <b>
+                                six main sorting algorithms,</b>
+                            adjust sorting speed, and observe the step-by-step process as the algorithms sort an array
+                            using
+                            <b>
+                                ReactJS and Tailwind CSS.</b>
+                        </p>
+                    </div>
+                    <div class="flex space-x-4 mt-5 justify-center">
+                        <div
+                            class="z-10 flex items-center bg-yellow-400 rounded-full font-bold hover:bg-yellow-600 transition duration-300 p-3 livelink">
+                            <a href="https://anuplohar001.github.io/AlgoSort/" class="flex">Live Link</a>
+                        </div>
+                        <div
+                            class="z-10 flex items-center bg-yellow-400 rounded-full font-bold hover:bg-yellow-600 transition duration-300 p-3 gitHub">
+                            <a href="https://github.com/anuplohar001/AlgoSort" class="flex">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Column for Third Project -->
+            <div class="flex justify-center mt-8">
+                <div class="p-6 bg-gray-700 rounded-lg shadow-md ">
+                    <!-- Preview Image -->
+                    <div class="flex">
+                        <div class="contact">
+                            <video autoplay loop muted class="video object-cover rounded-lg mb-4">
+                                <source src="/assets/musicplayer.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="musicDesc">
+                            <h3 class="text-2xl font-bold mb-4 text-center text-yellow-400">Music Player Web App</h3>
+                            <p class="text-white">A music player web app supporting basic
+                                <b>
+                                    playback controls, playlist
+                                    management,
+                                    and displays information </b>
+                                about the currently playing track using
+                                <b>
+                                    HTML, CSS, and
+                                    JavaScript. </b>
+                                The
+                                <b>
+                                    Fetch API automatically browses songs </b> from nested folders containing different
+                                singers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 justify-center">
+                        <div
+                            class="z-10 flex items-center bg-yellow-400 rounded-full font-bold hover:bg-yellow-600 transition duration-300 p-3 livelink">
+                            <a href="https://anupbeatbox.freewebhostmost.com/" class="flex">Live Link</a>
+                        </div>
+                        <div
+                            class="z-10 flex items-center bg-yellow-400 rounded-full font-bold hover:bg-yellow-600 transition duration-300 p-3 gitHub">
+                            <a href="https://github.com/anuplohar001/BeatBox" class="flex">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-8 z-40 relative">
+            <h2 class="text-4xl font-bold text-center  mb-6">Get In Touch</h2>
+            <!-- Contact Form -->
+            <form onsubmit="sendEmail(); reset(); return false;" class="flex flex-col contact-form">
+                <input type="hidden" name="access_key" value="8ebae001-5513-48f7-be04-da3b8a6d255e">
+                <div>
+                    <label for="name" class="block text-lg font-bold text-yellow-400 mb-2">Name</label>
+                    <input type="text" id="name" name="subject" required placeholder="Enter your Name"
+                        class="w-full contact p-3 contact-inputs  rounded-lg border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="subject" class="block text-lg font-bold text-yellow-400 mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter Subject"
+                        class="contact-inputs w-full contact p-3  rounded-lg border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
+                </div>
+                <div class="my-6">
+                    <label for="message" class="block text-lg font-bold text-yellow-400">Message</label>
+                    <textarea id="message" name="message" rows="3" required placeholder="Enter Message"
+                        class="contact-inputs mt-3 w-full p-3 rounded-lg border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent contact"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="download-btn">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+            <!-- Social Icons -->
+            <div class="flex justify-center space-x-6 mt-8 social">
+                <a href="mailto:anuplohar001@gmail.com" target="_blank" class="z-10">
+                    <img src="/assets/icons/gmail.png" alt="Gmail"
+                        class="h-10 w-10 hover:opacity-75 transition duration-300">
+                </a>
+                <a href="https://www.linkedin.com/in/anup-lohar-581b81212" target="_blank" class="z-10">
+                    <img src="/assets/icons/linkedin.png" alt="LinkedIn"
+                        class="h-10 w-10 hover:opacity-75 transition duration-300">
+                </a>
+                <a href="https://github.com/anuplohar001" target="_blank" class="z-10">
+                    <img src="/assets/icons/github.png" alt="GitHub"
+                        class="h-10 w-10 hover:opacity-75 transition duration-300 rounded-lg">
+                </a>
+
+                <a href="https://leetcode.com/u/anuplohar001/" target="_blank" class="z-10">
+                    <img src="/assets/icons/leetcode.png" alt="Leetcode"
+                        class="h-10 w-10 hover:opacity-75 transition duration-300">
+                </a>
+                <a href="https://www.codechef.com/users/anup001" target="_blank" class="z-10 rounded-full">
+                    <img src="/assets/icons/codechef.jpg" alt="Leetcode"
+                        class="h-10 w-10 hover:opacity-75 transition duration-300">
+                </a>
+                <a href="https://instagram.com/aanup01" target="_blank" class="z-10">
+                    <img src="/assets/icons/Instagram.png" alt="Instagram"
+                        class="h-10 w-10 hover:opacity-75 transition duration-300">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "7c244159-352e-4295-8b13-fbebce4dedd7",
+                To: 'anuplohar001@gmail.com',
+                From: "anuplohar001@outlook.com",
+                Subject: "Email From Anup's Portfolio Contact Form",
+                Body: "Name: " + document.getElementById("name").value +
+                    "<br>Subject: " + document.getElementById("subject").value +
+                    "<br>Message: " + document.getElementById("message").value
+            }).then(
+                message => alert("Message sent successfully")
+            );
+        }
+    </script>
+</body>
+
+</html>

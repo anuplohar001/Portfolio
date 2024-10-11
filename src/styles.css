@@ -1,0 +1,247 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar Styles */
+nav {
+    transition: background-color 0.3s;
+}
+
+nav ul li a {
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    /* Light blue on hover */
+}
+
+/* Button Hover Effects */
+a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Floating circles animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+
+.circle {
+    z-index: 0;
+    position: fixed;
+    animation: float 5s infinite ease-in-out;
+    opacity: 0.2;
+}
+
+.express {
+    right: 300px;
+    top: 150px;
+    width: 250px;
+    height: 250px;
+}
+
+.react {
+    left: 10px;
+    top: 80px;
+    width: 250px;
+    height: 250px;
+}
+
+.nodejs {
+    right: 10px;
+    bottom: 20px;
+}
+
+.mongodb {
+    top: 150px;
+    left: 350px;
+    width: 400px;
+    height: 400px;
+}
+
+.nextjs {
+    position: fixed;
+    left: 50px;
+    bottom: 0px;
+    width: 250px;
+    height: 250px;
+}
+
+/* Underline Effect on Section Title */
+#about h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 3px;
+    background-color: #3b82f6;
+    /* Tailwind's blue-500 */
+    border-radius: 3px;
+}
+
+/* Other Skills Section Styles */
+
+
+.skills-carousel {
+    overflow: hidden;
+}
+
+.skills-track {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Animation for Infinite Scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+}
+
+/* Hover underline effect */
+.hover-underline {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.hover-underline::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #3b82f6;
+    /* Tailwind's blue-500 */
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.hover-underline:hover {
+    color: #ffffff;
+    /* Optional: change text color on hover */
+}
+
+/* Yellow-Themed Download Button */
+.download-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #fbbf24;
+    /* Dark gray for text contrast */
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #f59e0b;
+    /* Tailwind's yellow-500 */
+    transform: translateY(-2px);
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background-color: #fbbf24;
+    /* Dark gray for text contrast */
+    font-size: 1rem;
+    border-radius: 4rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.livelink {
+    color: #003892;
+    text-decoration-line: underline;
+}
+
+.gitHub{
+    color: rgb(0, 0, 0);
+}
+
+.musicDesc{
+    margin-left: 2rem;
+    height: 16rem;
+    width: 20rem;
+}
+
+.music{
+    height: 16rem;
+    width: 30rem;
+}
+
+.contact{
+    z-index: 30;
+}
+
+.indexx{
+    z-index: 40;
+}
+
+.social{
+    gap: 60px;
+}
+
+.contact-form{
+    gap: 1rem;
+}
+
+.contact-inputs{
+    color: black;
+    margin-top: 10px;
+    background-color: rgb(233, 231, 231);
+}
+
+.education {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.results{
+    color: #4989f0;
+    text-decoration-line:underline;
+}
+
+.college{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tenth{
+    margin-top: 10px;
+}
+
+.video{
+    width: 30rem;
+    height: 16rem;
+}
