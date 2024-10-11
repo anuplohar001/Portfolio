@@ -12,7 +12,7 @@
 
 <body class="bg-gray-900 text-white">
 
-    
+
     <nav class="bg-gray-800 text-gray-300 px-8 py-4 fixed top-0 left-0 w-full shadow-md indexx">
         <div class="flex justify-between items-center">
             <h1 class="text-2xl font-bold text-white">Welcome to My Portfolio</h1>
@@ -412,8 +412,9 @@
         <div class="max-w-4xl mx-auto px-8 z-40 relative">
             <h2 class="text-4xl font-bold text-center  mb-6">Get In Touch</h2>
             <!-- Contact Form -->
-            <form onsubmit="sendEmail(); reset(); return false;" class="flex flex-col contact-form">
+            <form id="form" action="https://api.web3forms.com/submit" method="POST" class="flex flex-col contact-form">
                 <input type="hidden" name="access_key" value="8ebae001-5513-48f7-be04-da3b8a6d255e">
+                <input type="hidden" name="from" id="from" value="Anup's Portfolio">
                 <div>
                     <label for="name" class="block text-lg font-bold text-yellow-400 mb-2">Name</label>
                     <input type="text" id="name" name="subject" required placeholder="Enter your Name"
@@ -429,8 +430,8 @@
                     <textarea id="message" name="message" rows="3" required placeholder="Enter Message"
                         class="contact-inputs mt-3 w-full p-3 rounded-lg border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent contact"></textarea>
                 </div>
-                <div class="text-center">
-                    <button type="submit" class="download-btn">
+                <div class="text-center" >
+                    <button id="result" type="submit" class="download-btn">
                         Send Message
                     </button>
                 </div>
@@ -467,21 +468,45 @@
         </div>
     </section>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
-        function sendEmail() {
-            Email.send({
-                SecureToken: "7c244159-352e-4295-8b13-fbebce4dedd7",
-                To: 'anuplohar001@gmail.com',
-                From: "anuplohar001@outlook.com",
-                Subject: "Email From Anup's Portfolio Contact Form",
-                Body: "Name: " + document.getElementById("name").value +
-                    "<br>Subject: " + document.getElementById("subject").value +
-                    "<br>Message: " + document.getElementById("message").value
-            }).then(
-                message => alert("Message sent successfully")
-            );
-        }
+        const form = document.getElementById('form');
+            const result = document.getElementById('result');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+                result.innerText = "Please wait..."
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                    .then(async (response) => {
+                        let json = await response.json();
+                        if (response.status == 200) {
+                            result.innerText = json.message;
+                        } else {
+                            console.log(response);
+                            result.innerText = json.message;
+                        }
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        result.innerText = "Something went wrong!";
+                    })
+                    .then(function () {
+                        form.reset();                        
+                        setTimeout(() => {
+                            result.innerText = "Send Message"
+                        }, 3000);
+                    });
+            });
     </script>
 </body>
 
