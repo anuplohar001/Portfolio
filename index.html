@@ -287,7 +287,7 @@
                     </a>
                 </div>
                 <div class="flex mt-12 text-white justify-center" style="margin-left: 20px;">
-                    <a href="https://drive.google.com/file/d/13yZKnLwJb-mMNJ9uPsGqBUbks7xJsAXw/view"
+                    <a href="https://drive.google.com/file/d/11TXDYQgv6mswlAn1QqRz14SffmvIVr4r/view?usp=drive_link"
                         class="download-btn z-10">
                         Google Drive Link
                     </a>
@@ -430,7 +430,7 @@
                     <textarea id="message" name="message" rows="3" required placeholder="Enter Message"
                         class="contact-inputs mt-3 w-full p-3 rounded-lg border border-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent contact"></textarea>
                 </div>
-                <div class="text-center" >
+                <div class="text-center">
                     <button id="result" type="submit" class="download-btn">
                         Send Message
                     </button>
@@ -470,43 +470,43 @@
 
     <script>
         const form = document.getElementById('form');
-            const result = document.getElementById('result');
+        const result = document.getElementById('result');
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
-                result.innerText = "Please wait..."
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerText = "Please wait..."
 
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerText = json.message;
+                    } else {
+                        console.log(response);
+                        result.innerText = json.message;
+                    }
                 })
-                    .then(async (response) => {
-                        let json = await response.json();
-                        if (response.status == 200) {
-                            result.innerText = json.message;
-                        } else {
-                            console.log(response);
-                            result.innerText = json.message;
-                        }
-                    })
-                    .catch(error => {
-                        console.log(error);
-                        result.innerText = "Something went wrong!";
-                    })
-                    .then(function () {
-                        form.reset();                        
-                        setTimeout(() => {
-                            result.innerText = "Send Message"
-                        }, 3000);
-                    });
-            });
+                .catch(error => {
+                    console.log(error);
+                    result.innerText = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.innerText = "Send Message"
+                    }, 3000);
+                });
+        });
     </script>
 </body>
 
